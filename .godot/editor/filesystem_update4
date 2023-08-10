@@ -1,0 +1,6 @@
+res://Main.gd
+res://default_env.tres
+res://Main.tscn
+res://main/Music.gd
+res://Game.tscn
+res://tests/main_test.tscn

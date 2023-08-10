@@ -61,7 +61,7 @@ Playing the game from source
 
 You'll need:
 
-* [Godot](https://godotengine.org/download) 3.2.3 or later.
+* [Godot](https://godotengine.org/download) 4.0.3 or later (the main branch of the repository is being ported to Godot 4. If you want the previous version for Godot 3, it is in the godot_3.5 branch).
 * A Nakama server (version 2.15.0 or later) to connect to.
 
 The easiest way to setup a Nakama server locally for testing/learning purposes is [via Docker](https://heroiclabs.com/docs/install-docker-quickstart/), and in fact, there is a `docker-compose.yml` included in the source code of "Fish Game".

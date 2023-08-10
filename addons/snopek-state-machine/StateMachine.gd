@@ -1,12 +1,16 @@
-tool
+@tool
 extends Node
 
-export (String, MULTILINE) var allowed_transitions setget set_allowed_transitions
+var allowed_transitions:
+	set(value): 
+		set_allowed_transitions
+	get:
+		return set_allowed_transitions
 
 var current_state
 var allowed_transitions_parsed := {}
 
-signal state_changed (state, info)
+signal state_changed(state, info)
 
 # @todo Causes some error in game!
 #func _get_configuration_warning() -> String:
@@ -87,7 +91,7 @@ func _unhandled_input(event: InputEvent) -> void:
 	if current_state and current_state.has_method('_state_unhandled_input'):
 		current_state._state_unhandled_input(event)
 
-func _unhandled_key_input(event: InputEventKey) -> void:
+func _unhandled_key_input(event: InputEvent) -> void:
 	if current_state and current_state.has_method('_state_unhandled_key_input'):
 		current_state._state_unhandled_key_input(event)
 
